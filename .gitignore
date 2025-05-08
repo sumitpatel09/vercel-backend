@@ -1,0 +1,15 @@
+# Node.js / Next.js standard ignore list
+
+node_modules/
+.next/
+out/
+dist/
+coverage/
+.env
+.env.local
+.env.production
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.local
+*.log
