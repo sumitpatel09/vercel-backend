@@ -20,7 +20,7 @@ app.use(cors({
   credentials: true
 }));
 
-app.use(bodyParser.json());
+app.use(express.json());
 
 // Routes
 app.use('/api/auth', require('./routes/auth'));
