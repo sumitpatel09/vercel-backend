@@ -12,7 +12,14 @@ const app = express();
 connectDB();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: [
+    "https://courageous-sunburst-7e590a.netlify.app/", // ✅ Replace with your deployed frontend URL
+    "http://localhost:3000"             // ✅ Local development
+  ],
+  credentials: true
+}));
+
 app.use(bodyParser.json());
 
 // Routes
@@ -22,5 +29,5 @@ app.use('/api/notifications', require('./routes/notifications'));
 app.use('/api/auth/users', require('./routes/users'));
 app.use('/api/session', require('./routes/session'));
 
-// ✅ Export the app for Vercel
+// Export the app for deployment (Render or Vercel)
 module.exports = app;
