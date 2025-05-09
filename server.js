@@ -14,7 +14,7 @@ connectDB();
 // Middleware
 app.use(cors({
   origin: [
-    "https://courageous-sunburst-7e590a.netlify.app/", // ✅ Replace with your deployed frontend URL
+    "https://vercel-fronted.onrender.com", // ✅ Replace with your deployed frontend URL
     "http://localhost:3000"             // ✅ Local development
   ],
   credentials: true
